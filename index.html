@@ -1,1 +1,98 @@
-<h1> Hello! </h>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Background color */
+        }
+        header {
+            background-color: #333; /* Header color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f4f4f4;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333; /* Link color */
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    <nav id="blog-nav">
+        <!-- Links will be dynamically generated here -->
+    </nav>
+    <div class="container" id="blog-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <script>
+        // Blog post data
+        const posts = [
+            { title: "Post 1 Title", date: "February 22, 2024", content: "This is the content of post 1..." },
+            { title: "Post 2 Title", date: "February 21, 2024", content: "This is the content of post 2..." }
+            // Add more posts as needed
+        ];
+
+        // Sort posts by date (most recent first)
+        posts.sort((a, b) => {
+            return new Date(b.date) - new Date(a.date);
+        });
+
+        // Function to generate blog post links
+        function generatePostLinks() {
+            const nav = document.getElementById('blog-nav');
+            posts.forEach((post, index) => {
+                const link = document.createElement('a');
+                link.href = `#post${index + 1}`;
+                link.textContent = post.title;
+                nav.appendChild(link);
+            });
+        }
+
+        // Function to generate blog post content
+        function generatePostContent() {
+            const container = document.getElementById('blog-content');
+            posts.forEach((post, index) => {
+                const section = document.createElement('section');
+                section.id = `post${index + 1}`;
+                section.innerHTML = `
+                    <h2>${post.title}</h2>
+                    <p>Date: ${post.date}</p>
+                    <p>${post.content}</p>
+                `;
+                container.appendChild(section);
+            });
+        }
+
+        // Generate blog post links and content when the page loads
+        window.onload = function() {
+            generatePostLinks();
+            generatePostContent();
+        };
+    </script>
+</body>
+</html>
