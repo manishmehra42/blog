@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendations</title>
+    <style>
+        /* Reset CSS */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .music-list {
+            margin-top: 20px;
+        }
+        .music-list h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .music-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .music-list li {
+            margin-bottom: 10px;
+        }
+        .music-list li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .music-list li a:hover {
+            color: #666;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Music Recommendations</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#books">Books</a>
+        <a href="#blog">Blog</a>
+    </nav>
+    <div class="container">
+        <section class="music-list">
+            <h2>Music Recommendations</h2>
+            <ul>
+                <li><a href="#">Artist 1 - Song 1</a></li>
+                <li><a href="#">Artist 2 - Song 2</a></li>
+                <li><a href="#">Artist 3 - Song 3</a></li>
+                <li><a href="#">Artist 4 - Song 4</a></li>
+                <li><a href="#">Artist 5 - Song 5</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Manish's Blog</p>
+    </footer>
+</body>
+</html>
